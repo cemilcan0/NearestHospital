@@ -39,16 +39,16 @@ function onSuccess(position) {
     let pend = getDistance(pend1, pend2, position.coords.latitude, position.coords.longitude)
 
     if (mecid < ata && mecid < pend) {
-        document.getElementById("try").innerHTML = `<h1 style='font-size: 45px; font-weight: bold; text-align: center; margin-top: 300px;'>En yakın hastane Mecidiyeköy</h1>`;
+        document.getElementById("try").innerHTML = `<h1 style='font-size: 45px; font-weight: bold; text-align: center; margin-top: 300px;'>The Nearest Hospital Is Mecidiyeköy</h1>`;
     }
     else if (ata < mecid && ata < pend) {
-        document.getElementById("try").innerHTML = `<h1 style='font-size: 45px; font-weight: bold; text-align: center; margin-top: 300px;'>En yakın hastane Ataşehir</h1>`;
+        document.getElementById("try").innerHTML = `<h1 style='font-size: 45px; font-weight: bold; text-align: center; margin-top: 300px;'>The Nearest Hospital Is Ataşehir</h1>`;
     }
     else if (pend < mecid && pend < ata) {
-        document.getElementById("try").innerHTML = `<h1 style='font-size: 45px; font-weight: bold; text-align: center; margin-top: 300px;'>En yakın hastane Pendik</h1>`;
+        document.getElementById("try").innerHTML = `<h1 style='font-size: 45px; font-weight: bold; text-align: center; margin-top: 300px;'>The Nearest Hospital Is Pendik</h1>`;
     }
     else {
-        console.log('Bir hata meydana geldi');
+        console.log('Something Went Wrong');
     }
 }
 function onError(error) {
